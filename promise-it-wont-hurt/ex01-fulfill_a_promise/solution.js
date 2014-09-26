@@ -3,7 +3,9 @@ var defer = q.defer();
 
 defer.promise.then(console.log);
 
-setTimeout(defer.resolve, 300, 'RESOLVED!');
+setTimeout(function() {
+  defer.resolve('RESOLVED!')
+}, 300)
 
 /* ANSEWR */
 // var q = require('q');
