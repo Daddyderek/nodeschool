@@ -1,9 +1,10 @@
 const makeCounter = (someObj) => {
-  var num = 0, done = false;
+  'use strict';
+  let num = 0, done = false;
 
   someObj.next = () => {
-    num < 10?  num++ : done = true;
-    return { value: num, done: done };
+    value < 10? ++value : done = true;
+    return { value, done };
   }
 }
 
