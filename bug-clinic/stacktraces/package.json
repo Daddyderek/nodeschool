@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "domain": "^0.0.1",
+    "stackup": "^1.0.1"
+  }
+}
