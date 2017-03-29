@@ -1,3 +1,5 @@
+## Intake
+
 CLINICIAN'S REPORT:
 
 >   "Program admitted %s suff. general systems
