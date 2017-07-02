@@ -1,19 +1,6 @@
-module.exports = function(goodUsers) {
-  return function(submittedUsers) {
-    return submittedUsers.every(function(submittedUsers) {
-      return goodUsers.some(function(goodUsers) {
-        return goodUsers.id === submittedUsers.id;
-      });
-    });
-  }
-}
-/* ANSWER */
-// module.exports = function checkUsersValid(goodUsers) {
-//   return function(submittedUsers) {
-//     return submittedUsers.every(function(submittedUser) {
-//       return goodUsers.some(function(goodUser) {
-//         return goodUser.id === submittedUser.id
-//       })
-//     })
-//   }
-// }
+module.exports = goodUsers =>
+  validUsers =>
+    validUsers.every( ({ id: vID }) =>
+      goodUsers.some( ({ id: gID }) => vID === gID )
+    );
+
