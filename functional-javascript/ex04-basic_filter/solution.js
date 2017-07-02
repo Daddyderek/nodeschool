@@ -1,11 +1,9 @@
-module.exports = function(objects) {
-  return objects
-          .map(function(val) { return val.message; })
-          .filter(lessThan50);
-};
-function lessThan50(str) {
-  return str.length < 50;
-}
+const getShortMessages = messages =>
+  messages
+    .filter( ({ message }) => message.length < 50 )
+    .map( ({ message }) => message );
+
+module.exports = getShortMessages;
 
 /* ANSWER */
 // module.exports = function getShortMessages(messages) {
