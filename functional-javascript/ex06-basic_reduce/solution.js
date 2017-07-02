@@ -1,9 +1,7 @@
-module.exports = function(input) {
-  return input.reduce(function(obj, word) {
-    obj[word] = ++obj[word] || 1;
-    return obj;
-  }, {});
-}
+module.exports = input => input.reduce( (obj, word) => {
+  obj[word] = ++obj[word] || 1;
+  return obj;
+}, {});
 
 /* ANSWER */
 // function countWords(arr) {
