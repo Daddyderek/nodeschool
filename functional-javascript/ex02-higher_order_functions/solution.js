@@ -1,8 +1,4 @@
-module.exports = function(fn, num) {
-  for (var i = 0; i < num; i++) {
-    fn()
-  }
-};
+module.exports = (fn, num) => Array(num).forEach(() => fn());
 
 /* ANSWER */
 // function repeat(operation, num) {
